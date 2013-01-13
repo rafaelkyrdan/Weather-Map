@@ -1,0 +1,61 @@
+/*
+  general style
+*/
+
+body{
+    background-size: 120%;
+}
+
+.toolbar{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 32px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    background: #7d7e7d;
+    cursor: pointer;
+}
+
+.closeWindow {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 5px 0 0 0;
+    width: 30px;
+    height: 25px;
+    -webkit-app-region: no-drag;
+}
+
+.none{
+    display: none;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #8a2be2;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #8a2be2;
+}
+
+
+
+
+
