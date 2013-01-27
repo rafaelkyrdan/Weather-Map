@@ -1,31 +1,84 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Open Weather Map</title>
+
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width">
-
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/bootstrap-responsive.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/bootmetro.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/bootmetro-tiles.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/bootmetro-charms.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/metro-ui-light.css">
-    <link rel="stylesheet" type="text/css" href="app/bootmetro/content/css/icomoon.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'/>
+    <link href='app/api/theme/default/style.css' rel='stylesheet' type='text/css'/>
+    <link href='app/api/theme/default/main.css' rel='stylesheet' type='text/css'/>
 
     <link rel="stylesheet" type="text/css" href="app/css/main.css">
 
-    <script type="text/javascript" src='app/js/libs/jquery-1.8.2.min.js'></script>
-    <script type="text/javascript" src='app/js/init.js'></script>
+    <!--<script src="http://openlayers.org/api/OpenLayers.js"></script>-->
+    <script src="app/api/OpenLayers.js"></script>
+    <script src="http://openweathermap.org/js/OWM.OpenLayers.1.3.4.js" ></script>
+    <!--<script src="app/api/OWM.OpenLayers.1.3.4.js" ></script>-->
+
+    <script src="app/js/init.js"></script>
+
+    <style type="text/css">
+        #map {
+            width: 100%;
+            height: 100%;
+            border: 0px;
+            padding: 0px;
+            position: absolute;
+        }
+
+        body {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        #links {
+            background: #575757;
+            color: white;
+            z-index:1000;
+            width: 33%;
+            font-size: 1em;
+            text-align: left;
+            position: absolute;
+            bottom: 0.2em;
+            left: 0.2em;
+            padding: 5px;
+            width: 33%;
+            /* for IE */
+            filter:alpha(opacity=90);
+            /* CSS3 standard */
+            opacity:0.9;
+            border-radius: 4px;
+        }
+
+        .olControlAttribution {
+            padding: 5px;
+            z-index: 1000;
+            bottom: 0.2em !important;
+            overflow: hidden;
+            background: #575757;
+            color: white;
+            width: 33%;
+            font-size: 1em !important;
+            text-align: right;
+            /* for IE */
+            filter:alpha(opacity=90);
+            /* CSS3 standard */
+            opacity:0.9;
+            border-radius: 4px;
+        }
+
+        a:link, a:visited, a:hover, a:active {
+            /*color: #00008a;*/
+            color: #9e9eff;
+        }
+    </style>
 
 </head>
-<body>
-
-<div id="content" class="container-fluid">
-
+<body  onload="init(); init2();">
+<div id="content" class="">
     <div class="toolbar">
         <span class="closeWindow" data-placement="left" rel="tooltip"  title="Close application">
             <div class="glyph">
@@ -33,21 +86,31 @@
             </div>
         </span>
     </div>
-
     <br/>
     <h1> Open Weather Map</h1>
     <h2>I using node.js <script>document.write(process.version)</script></h2>
+    <div id="basicMap" style=""></div>
 
 </div>
+</body>
 
 <script type="text/javascript">
-    $(function () {
-        $("[rel='tooltip']").tooltip();
-    });
+    function init() {
+        //Center of map
+        var lat = 7486473;
+        var lon = 4193332;
+        var lonlat = new OpenLayers.LonLat(lon, lat);
+        var map = new OpenLayers.Map("basicMap");
+        // Create overlays
+        //  OSM
+        var mapnik = new OpenLayers.Layer.OSM();
+        // Stations
+        var stations = new OpenLayers.Layer.Vector.OWMStations("Stations");
+        // Current weather
+        var city = new OpenLayers.Layer.Vector.OWMWeather("Weather");
+        //Addind maps
+        map.addLayers([mapnik, stations, city]);
+        map.setCenter( lonlat, 10 );
+    }
 </script>
-
-<script type="text/javascript" src="app/bootmetro/scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="app/bootmetro/scripts/bootmetro.js"></script>
-
-</body>
 </html>

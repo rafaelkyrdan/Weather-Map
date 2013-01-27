@@ -1,7 +1,7 @@
 WeatherMap
 ==========
 
-Open Weather Map
+Weather Map. Not finished
 
 ##English
 

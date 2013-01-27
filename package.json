@@ -12,7 +12,7 @@
         "kiosk" : false,
         "frame" : false,
         "show" : false,
-        "toolbar": false,
+        "toolbar": true,
         "width": 1000,
         "height": 620,
         "position": "center",

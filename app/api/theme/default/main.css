@@ -1,0 +1,55 @@
+
+.olPopupCloseBox {
+    background: url("http://openweathermap.org/img/glyphicons-halflings.png") no-repeat scroll 0% 0% transparent !important;
+    background-position: -48px -96px !important;
+}
+
+.olPopup {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	border-radius: 8px;
+	padding: 4px;
+}
+
+#FramedCloud_GroupDiv {}
+
+p.weather_title {
+	font-size: medium; font-weight: bold; color:black;
+}
+
+weather_title_link {
+	text-decoration: underline; color: red; !important;
+}
+ 
+div.weather_block{
+	float: left; 
+}
+
+div.small_temp_block {
+	display: block; width: 30px; overflow: visible;
+}
+
+div.big_temp {
+	display: block; font-size: 30px;  padding-top: 6px;
+}
+
+div.small_temp, div.small_temp_grey {
+	float: left; 	text-align: center; font-size: small; 
+}
+
+div.small_val, div.small_val_grey {
+	display: block; clear: left; font-size: x-small; 
+/*padding: 0pt 3pt;*/
+}
+
+div.small_temp_grey, div.small_val_grey { color: gray; }
+
+img.weather_image {
+	float: left; border: medium none; width: 50px; height: 45px; repeat scroll 0% 0% transparent;}
+
+img.station_image {
+	float: left; border: medium none; width: 25px; height: 25px; scroll 0% 0% transparent;
+	padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 8px
+}
+
+div.cur_weather_block, div.temp_block {float: left;}
+

@@ -1,17 +1,18 @@
 
-function init () {
+function init2 () {
 
     var context = document.querySelector( '#content' );
+    w("c", content);
 
     context.querySelector( ".closeWindow" ).onclick = function ( e ) {
-
+        w("t", context);
         win.close();
         return false;
 
     };
 }
 
-window.onload = init;
+//window.onload = init2;
 
 var gui = require( 'nw.gui' );
 var win = gui.Window.get();
