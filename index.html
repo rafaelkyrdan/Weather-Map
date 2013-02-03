@@ -1,14 +1,17 @@
 <html>
 <head>
-    <title>Open Weather Map</title>
+    <title>Weather Map</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'/>
+
     <link href='app/api/theme/default/style.css' rel='stylesheet' type='text/css'/>
     <link href='app/api/theme/default/main.css' rel='stylesheet' type='text/css'/>
 
     <link rel="stylesheet" type="text/css" href="app/css/main.css">
+    <link rel="stylesheet" type="text/css" href="app/css/sidebar.css">
 
     <!--<script src="http://openlayers.org/api/OpenLayers.js"></script>-->
     <script src="app/api/OpenLayers.js"></script>
@@ -78,19 +81,200 @@
 
 </head>
 <body  onload="init(); init2();">
-<div id="content" class="">
+<div class="content">
     <div class="toolbar">
-        <span class="closeWindow" data-placement="left" rel="tooltip"  title="Close application">
+        <span class="closeWindow" rel="tooltip"  title="Close application">
             <div class="glyph">
                 <div class="fs1" aria-hidden="true" data-icon=""></div>
             </div>
         </span>
     </div>
-    <br/>
-    <h1> Open Weather Map</h1>
-    <h2>I using node.js <script>document.write(process.version)</script></h2>
-    <div id="basicMap" style=""></div>
-
+    <div class="main">
+        <div class="loading">
+            <div class="ajax-loader"></div>
+        </div>
+        <!--<br/>-->
+        <!--<h1> Open Weather Map</h1>-->
+        <!--<h2>I using node.js <script>document.write(process.version)</script></h2>-->
+        <!--<div id="basicMap" style=""></div>-->
+    </div>
+    <div class="sidebar">
+        <a class="tiles blue">
+            <span class="icon thunder"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon rain"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon snow"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon sun"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon three"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon chance"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon overcast"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon three-leaf"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon leaf-three"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon pine"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon radioactive"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon skydrive"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon snowflake"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon map"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon fahrenheit"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon palmtree"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon circle"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon add"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon minus"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon github"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon home"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon image"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue">
+            <span class="icon cloud"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet">
+            <span class="icon globe"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green">
+            <span class="icon for-sale"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+    </div>
 </div>
 </body>
 

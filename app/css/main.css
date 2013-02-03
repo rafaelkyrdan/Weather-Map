@@ -2,36 +2,6 @@
   general style
 */
 
-body{
-    background-size: 120%;
-}
-
-.toolbar{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 32px;
-    -webkit-user-select: none;
-    -webkit-app-region: drag;
-    background: #7d7e7d;
-    cursor: pointer;
-}
-
-.closeWindow {
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    margin: 5px 0 0 0;
-    width: 30px;
-    height: 25px;
-    -webkit-app-region: no-drag;
-}
-
-.none{
-    display: none;
-}
-
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 12px;
@@ -55,9 +25,99 @@ body{
     background: #8a2be2;
 }
 
-.closeWindow {
-    background: white;
+.none{
+    display: none;
 }
+
+body{
+    background: url("../img/bgr.png");
+}
+
+.toolbar{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 32px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    background: #7d7e7d;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.closeWindow {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 5px 0 0 0;
+    width: 30px;
+    height: 25px;
+    -webkit-app-region: no-drag;
+}
+
+.closeWindow {
+    background: url("../img/12.png") no-repeat center;
+}
+
+.content{
+    clear:both;
+    height: 546px;
+    padding-top: 32px;
+}
+
+.content .main{
+    float: left;
+    width: 734px;
+    /*height: 600px;*/
+    height: 101%;
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    margin: 260px auto;
+    padding-left: 45px;
+}
+
+@-webkit-keyframes ajax-loader-rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes ajax-loader-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes ajax-loader-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ajax-loader {
+    opacity: .8;
+    display: block;
+    border-radius: 50%;
+
+    font-size: 29px;
+    width: .25em;
+    height: .25em;
+    margin: 0 auto;
+
+    box-shadow:
+        0 -.4em       0 0 rgba(0,0,0,1),
+        -.28em -.28em 0 0 rgba(0,0,0,.75),
+        -.4em 0       0 0 rgba(0,0,0,.50),
+        -.28em .28em  0 0 rgba(0,0,0,.25)
+;
+
+    -webkit-animation: .85s ajax-loader-rotate steps(8) infinite;
+    -moz-animation: .85s ajax-loader-rotate steps(8) infinite;
+    animation: .85s ajax-loader-rotate steps(8) infinite;
+}
+
+
+
+
 
 
 

@@ -1,0 +1,197 @@
+.green{
+    background: #00aba9;
+}
+
+.blue{
+    background: #2e8bcc;
+}
+
+.violet{
+    background: #781096
+}
+
+.content .sidebar{
+    float: right;
+    width: 250px;
+    /*height: 600px;*/
+    height: 101%;
+    /*padding-top: 40px;*/
+    border-left: 1px solid #dcdcdc;
+    overflow-y: auto;
+}
+
+.content .sidebar:hover{
+    -webkit-box-shadow: -3px 0px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         -3px 0px 5px rgba(50, 50, 50, 0.75);
+}
+
+a.tiles{
+    display: block;
+    width: 200px;
+    height: 150px;
+    margin: 10px auto;
+    position: relative;
+    opacity: 0.8;
+}
+
+a.tiles:hover{
+    outline: 3px #225a68 solid;
+    opacity: 1;
+}
+
+span.icon{
+    display: block;
+    margin: 10px auto;
+    width: 70px;
+    height: 70px;
+}
+
+a.tiles:hover span.icon{
+    opacity: 0.4;
+}
+
+span.big-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background: transparent;*/
+    background: #f09609;
+    opacity: 0.5;
+    color: transparent;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+span.big-content:hover{
+    background: #f09609;
+    color: black;
+    opacity: 1;
+}
+
+span.mini-content{
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+span.big-content:hover span.mini-content{
+    display: none;
+}
+
+.cloud{
+    background:
+    url("../img/7.png") no-repeat center;
+}
+
+.globe{
+    background:
+        url("../img/appbar.globe.svg") no-repeat center;
+}
+
+.for-sale{
+    background:
+        url("../img/appbar.forsale.svg") no-repeat center;
+}
+
+.github{
+    background:
+        url("../img/appbar.github.svg") no-repeat center;
+}
+
+.home{
+    background:
+        url("../img/appbar.home.svg") no-repeat center;
+}
+
+.image{
+    background:
+        url("../img/appbar.image.svg") no-repeat center;
+}
+
+.circle{
+    background:
+        url("../img/appbar.information.circle.svg") no-repeat center;
+}
+
+.add{
+    background:
+        url("../img/appbar.magnify.add.svg") no-repeat center;
+}
+
+.minus{
+    background:
+        url("../img/appbar.magnify.minus.svg") no-repeat center;
+}
+
+.map{
+    background:
+        url("../img/appbar.map.satellite.svg") no-repeat center;
+}
+
+.fahrenheit{
+    background: url("../img/appbar.measure.farenheit.svg") no-repeat center;
+}
+
+.palmtree{
+    background: url("../img/appbar.palmtree.svg") no-repeat center;
+}
+
+.radioactive{
+    background: url("../img/appbar.radioactive.svg") no-repeat center;
+}
+
+.skydrive{
+    background: url("../img/appbar.skydrive.svg") no-repeat center;
+}
+
+.snowflake{
+    background: url("../img/appbar.snowflake.svg") no-repeat center;
+}
+
+.three-leaf{
+    background: url("../img/appbar.tree.leaf.svg") no-repeat center;
+}
+
+.leaf-three{
+    background: url("../img/appbar.tree.leaf.three.svg") no-repeat center;
+}
+
+.pine{
+    background: url("../img/appbar.tree.pine.svg") no-repeat center;
+}
+
+.three{
+    background: url("../img/appbar.tree.svg") no-repeat center;
+}
+
+.chance{
+    background: url("../img/appbar.weather.chance.svg") no-repeat center;
+}
+
+.overcast{
+    background: url("../img/appbar.weather.overcast.svg") no-repeat center;
+}
+
+.rain{
+    background: url("../img/appbar.weather.rain.svg") no-repeat center;
+}
+
+.snow{
+    background: url("../img/appbar.weather.snow.svg") no-repeat center;
+}
+
+.sun{
+    background: url("../img/appbar.weather.sun.svg") no-repeat center;
+}
+
+.thunder{
+    background: url("../img/appbar.weather.thunder.svg") no-repeat center;
+}
+
+
+
+

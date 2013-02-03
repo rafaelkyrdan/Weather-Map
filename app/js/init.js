@@ -1,8 +1,7 @@
 
 function init2 () {
 
-    var context = document.querySelector( '#content' );
-    w("c", content);
+    var context = document.querySelector( '.content' );
 
     context.querySelector( ".closeWindow" ).onclick = function ( e ) {
         w("t", context);
