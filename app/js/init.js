@@ -1,17 +1,9 @@
 
-function init2 () {
-
-    var context = document.querySelector( '.content' );
-
-    context.querySelector( ".closeWindow" ).onclick = function ( e ) {
-        w("t", context);
-        win.close();
-        return false;
-
-    };
+function init () {
+    App.initMap();
 }
 
-//window.onload = init2;
+window.onload = init;
 
 var gui = require( 'nw.gui' );
 var win = gui.Window.get();

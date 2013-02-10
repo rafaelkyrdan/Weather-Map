@@ -19,6 +19,7 @@
     <!--<script src="app/api/OWM.OpenLayers.1.3.4.js" ></script>-->
 
     <script src="app/js/init.js"></script>
+    <script src="app/js/app.js"></script>
 
     <style type="text/css">
         #map {
@@ -80,7 +81,7 @@
     </style>
 
 </head>
-<body  onload="init(); init2();">
+<body>
 <div class="content">
     <div class="toolbar">
         <span class="closeWindow" rel="tooltip"  title="Close application">
@@ -93,152 +94,9 @@
         <div class="loading">
             <div class="ajax-loader"></div>
         </div>
-        <!--<br/>-->
-        <!--<h1> Open Weather Map</h1>-->
-        <!--<h2>I using node.js <script>document.write(process.version)</script></h2>-->
-        <!--<div id="basicMap" style=""></div>-->
+        <div id="basicMap" style=""></div>
     </div>
     <div class="sidebar">
-        <a class="tiles blue">
-            <span class="icon thunder"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon rain"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon snow"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon sun"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon three"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon chance"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon overcast"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon three-leaf"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon leaf-three"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon pine"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon radioactive"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon skydrive"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon snowflake"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon map"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon fahrenheit"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon palmtree"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon circle"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
-            <span class="icon add"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles green">
-            <span class="icon minus"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon github"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
         <a class="tiles violet">
             <span class="icon home"></span>
             <span class="big-content">
@@ -246,29 +104,64 @@
                 some text
             </span>
         </a>
-        <a class="tiles green">
-            <span class="icon image"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue">
-            <span class="icon cloud"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet">
+        <a class="tiles violet" id="globe">
             <span class="icon globe"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
                 some text
             </span>
         </a>
-        <a class="tiles green">
-            <span class="icon for-sale"></span>
+        <a class="tiles blue" id="stations">
+            <span class="icon map"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue" id="pressure">
+            <span class="icon radioactive"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet" id="temp">
+            <span class="icon fahrenheit"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet" id="wind">
+            <span class="icon skydrive"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green" id="cloud">
+            <span class="icon overcast"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles violet" id="precipitation">
+            <span class="icon chance"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles blue" id="rain">
+            <span class="icon rain"></span>
+            <span class="big-content">
+                <span class="mini-content">&#9679; &#9679; &#9679;</span>
+                some text
+            </span>
+        </a>
+        <a class="tiles green" id="snow">
+            <span class="icon snowflake"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
                 some text
@@ -277,24 +170,4 @@
     </div>
 </div>
 </body>
-
-<script type="text/javascript">
-    function init() {
-        //Center of map
-        var lat = 7486473;
-        var lon = 4193332;
-        var lonlat = new OpenLayers.LonLat(lon, lat);
-        var map = new OpenLayers.Map("basicMap");
-        // Create overlays
-        //  OSM
-        var mapnik = new OpenLayers.Layer.OSM();
-        // Stations
-        var stations = new OpenLayers.Layer.Vector.OWMStations("Stations");
-        // Current weather
-        var city = new OpenLayers.Layer.Vector.OWMWeather("Weather");
-        //Addind maps
-        map.addLayers([mapnik, stations, city]);
-        map.setCenter( lonlat, 10 );
-    }
-</script>
 </html>

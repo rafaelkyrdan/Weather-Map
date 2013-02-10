@@ -28,7 +28,7 @@
 a.tiles{
     display: block;
     width: 200px;
-    height: 150px;
+    height: 125px;
     margin: 10px auto;
     position: relative;
     opacity: 0.8;
@@ -59,7 +59,7 @@ span.big-content{
     background: #f09609;
     opacity: 0.5;
     color: transparent;
-    height: 50px;
+    height: 45px;
     text-align: center;
     padding-top: 5px;
 }

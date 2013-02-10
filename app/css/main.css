@@ -68,16 +68,19 @@ body{
 
 .content .main{
     float: left;
-    width: 734px;
+    width: 748px;
     /*height: 600px;*/
     height: 101%;
+    position: relative;
 }
 
 .loading{
     width: 50px;
-    height: 50px;
-    margin: 260px auto;
-    padding-left: 45px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
 }
 
 @-webkit-keyframes ajax-loader-rotate {
