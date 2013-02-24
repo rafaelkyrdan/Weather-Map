@@ -41,6 +41,7 @@ body{
 a:link, a:visited, a:hover, a:active {
     color: #00008a;
     color: #9e9eff;
+    cursor: pointer;
 }
 
 

@@ -32,6 +32,7 @@ a.tiles{
     margin: 10px auto;
     position: relative;
     opacity: 0.8;
+    cursor: pointer;
 }
 
 a.tiles:hover{
