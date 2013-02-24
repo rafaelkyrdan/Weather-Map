@@ -4,7 +4,7 @@
     "version": "0.1",
     "window": {
         "title" : "Open Weather Map",
-        "icon": "",
+        "icon": "label.png",
         "as_desktop" : false,
         "resizable" : false,
         "always-on-top" : false,
@@ -12,14 +12,14 @@
         "kiosk" : false,
         "frame" : false,
         "show" : false,
-        "toolbar": true,
+        "toolbar": false,
         "width": 1000,
-        "height": 620,
+        "height": 585,
         "position": "center",
         "min_width": 1000,
-        "min_height": 620,
+        "min_height": 585,
         "max_width": 1000,
-        "max_height": 620
+        "max_height": 585
     },
     "webkit": {
         "plugin": false,

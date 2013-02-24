@@ -1,7 +1,7 @@
 WeatherMap
 ==========
 
-Not finished. WeatherMap free weather map
+WeatherMap free weather map
 
 ##English
 
@@ -11,7 +11,7 @@ WeatherMap is a desktop application that provides free weather data.
 WeatherMap wide range of weather data - map with current weather, quantity of precipitation,
 wind speed, clouds cover, sea level pressure maps, temperature, snow precipitation,
 data from weather stations, data from radars, data for cities.
-Weather data is recieved from OpenWeatherMap api.
+Weather data is received from [OpenWeatherMap](https://www.openweathermap.org) api.
 
 *How to install?*
 
@@ -21,11 +21,11 @@ You can download application.
 
 1. Unzip the archive.
 2. Directory consist of application and required files.
-3. Run the file cypher.
+3. Run the file Weather-Map.
 
 Versions:
 
-**cooming soon**
+[Download](https://www.dropbox.com/s/fcq3kzxkxniyuof/weather-map-win.zip)
 
 **or** create application from source (for advanced users). You should download
 project node-webkit https://github.com/rogerwang/node-webkit .
@@ -48,17 +48,12 @@ Making an executable file out of a .nw file
 Then, all you have to do is zip app.exe and required DLLs, and distribute them.
 And please also note that the nw.pak must also be distributed along with the app.exe.
 
-
-**Mac**
-
-**cooming soon**
-
 **Linux**
 
 You can download application.
 
 1. Unzip the application.
-2. Run the file cypher. Do not delete file nw.pak , it is part of application.
+2. Run the file Weather-Map. Do not delete file nw.pak , it is part of application.
 
 Versions:
 

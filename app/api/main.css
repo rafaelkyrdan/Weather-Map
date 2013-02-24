@@ -16,7 +16,7 @@ p.weather_title {
 	font-size: medium; font-weight: bold; color:black;
 }
 
-weather_title_link {
+.weather_title_link {
 	text-decoration: underline; color: red; !important;
 }
  

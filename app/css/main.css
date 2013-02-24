@@ -31,7 +31,18 @@
 
 body{
     background: url("../img/bgr.png");
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    border: 0;
 }
+
+a:link, a:visited, a:hover, a:active {
+    color: #00008a;
+    color: #9e9eff;
+}
+
 
 .toolbar{
     position: absolute;
@@ -118,6 +129,37 @@ body{
     animation: .85s ajax-loader-rotate steps(8) infinite;
 }
 
+#basicMap{
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 0px;
+    position: absolute;
+}
+
+
+.olControlAttribution {
+    display: none;
+    /*padding: 5px;*/
+    /*z-index: 1000;*/
+    /*bottom: 0.2em !important;*/
+    /*overflow: hidden;*/
+    /*background: #575757;*/
+    /*color: white;*/
+    /*width: 33%;*/
+    /*font-size: 1em !important;*/
+    /*text-align: right;*/
+    /* for IE */
+    /*filter:alpha(opacity=90);*/
+    /* CSS3 standard */
+    /*opacity:0.9;*/
+    /*border-radius: 4px;*/
+}
 
 
 

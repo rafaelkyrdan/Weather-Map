@@ -62,6 +62,7 @@ span.big-content{
     height: 45px;
     text-align: center;
     padding-top: 5px;
+    font-weight: bold;
 }
 
 span.big-content:hover{
@@ -82,49 +83,9 @@ span.big-content:hover span.mini-content{
     display: none;
 }
 
-.cloud{
-    background:
-    url("../img/7.png") no-repeat center;
-}
-
 .globe{
     background:
         url("../img/appbar.globe.svg") no-repeat center;
-}
-
-.for-sale{
-    background:
-        url("../img/appbar.forsale.svg") no-repeat center;
-}
-
-.github{
-    background:
-        url("../img/appbar.github.svg") no-repeat center;
-}
-
-.home{
-    background:
-        url("../img/appbar.home.svg") no-repeat center;
-}
-
-.image{
-    background:
-        url("../img/appbar.image.svg") no-repeat center;
-}
-
-.circle{
-    background:
-        url("../img/appbar.information.circle.svg") no-repeat center;
-}
-
-.add{
-    background:
-        url("../img/appbar.magnify.add.svg") no-repeat center;
-}
-
-.minus{
-    background:
-        url("../img/appbar.magnify.minus.svg") no-repeat center;
 }
 
 .map{
@@ -136,12 +97,8 @@ span.big-content:hover span.mini-content{
     background: url("../img/appbar.measure.farenheit.svg") no-repeat center;
 }
 
-.palmtree{
-    background: url("../img/appbar.palmtree.svg") no-repeat center;
-}
-
 .radioactive{
-    background: url("../img/appbar.radioactive.svg") no-repeat center;
+    background: url("../img/14.png") no-repeat center;
 }
 
 .skydrive{
@@ -150,22 +107,6 @@ span.big-content:hover span.mini-content{
 
 .snowflake{
     background: url("../img/appbar.snowflake.svg") no-repeat center;
-}
-
-.three-leaf{
-    background: url("../img/appbar.tree.leaf.svg") no-repeat center;
-}
-
-.leaf-three{
-    background: url("../img/appbar.tree.leaf.three.svg") no-repeat center;
-}
-
-.pine{
-    background: url("../img/appbar.tree.pine.svg") no-repeat center;
-}
-
-.three{
-    background: url("../img/appbar.tree.svg") no-repeat center;
 }
 
 .chance{
@@ -178,18 +119,6 @@ span.big-content:hover span.mini-content{
 
 .rain{
     background: url("../img/appbar.weather.rain.svg") no-repeat center;
-}
-
-.snow{
-    background: url("../img/appbar.weather.snow.svg") no-repeat center;
-}
-
-.sun{
-    background: url("../img/appbar.weather.sun.svg") no-repeat center;
-}
-
-.thunder{
-    background: url("../img/appbar.weather.thunder.svg") no-repeat center;
 }
 
 

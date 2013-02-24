@@ -1,9 +1,11 @@
 
 var App = ( function() {
 
-    var context, coords, zoom, map, mapnik, stations, city, el;
-    el = "basicMap"
+    var context, coords, zoom, map, mapnik, el;
+    var layers, mainLayer;
+    el = "basicMap";
     zoom = 5;
+    layers = [];
 
     //Addind maps
 
@@ -45,20 +47,6 @@ var App = ( function() {
 
     return {
 
-        stationsMap : function () {
-
-            context.querySelector( "#basicMap").innerHTML = "";
-
-            map = new OpenLayers.Map(el);
-            mapnik = new OpenLayers.Layer.OSM();
-            stations = new OpenLayers.Layer.Vector.OWMStations("Stations");
-            map.addLayers([mapnik, stations]);
-            getCoords();
-            toggleLoadingView();
-            map.setCenter(coords, zoom);
-
-        },
-
         addLayerTemp : function () {
 
             var layer_temp = new OpenLayers.Layer.XYZ(
@@ -71,7 +59,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_temp]);
+            layers = [mapnik, mainLayer, layer_temp];
+            App.mainMap();
         },
 
         addLayerPessure : function () {
@@ -87,7 +76,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_pressure]);
+            layers = [mapnik, mainLayer, layer_pressure];
+            App.mainMap();
         },
 
         addLayerSnow : function () {
@@ -102,7 +92,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_snow]);
+            layers = [mapnik, mainLayer, layer_snow];
+            App.mainMap();
         },
 
         addLayerWind : function () {
@@ -117,7 +108,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_wind]);
+            layers = [mapnik, mainLayer, layer_wind];
+            App.mainMap();
         },
 
         addLayerRain : function () {
@@ -133,7 +125,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_rain]);
+            layers = [mapnik, mainLayer, layer_rain];
+            App.mainMap();
         },
 
         addLayerPrecipitation : function () {
@@ -149,7 +142,8 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_precipitation]);
+            layers = [mapnik, mainLayer, layer_precipitation];
+            App.mainMap();
         },
 
         addLayerCloud : function () {
@@ -164,20 +158,22 @@ var App = ( function() {
                 }
             );
 
-            map.addLayers([layer_cloud]);
+
+            layers = [mapnik, mainLayer, layer_cloud];
+            App.mainMap();
         },
 
-        cityMap : function () {
+        mainMap : function (){
 
             context.querySelector( "#basicMap").innerHTML = "";
 
             map = new OpenLayers.Map(el);
             mapnik = new OpenLayers.Layer.OSM();
-            city = new OpenLayers.Layer.Vector.OWMWeather("Weather");
-            map.addLayers([mapnik, city]);
+            map.addLayers(layers);
             getCoords();
             toggleLoadingView();
             map.setCenter(coords, zoom);
+
         },
 
         initMap : function () {
@@ -185,19 +181,7 @@ var App = ( function() {
             context = document.querySelector( '.content' );
 
             context.querySelector( ".closeWindow" ).onclick = function ( e ) {
-                w("t", context);
                 win.close();
-                return false;
-
-            };
-
-            context.querySelector( "a#globe" ).onclick = function ( e ) {
-                App.cityMap();
-                return false;
-            };
-
-            context.querySelector( "a#stations" ).onclick = function ( e ) {
-                App.stationsMap();
                 return false;
             };
 
@@ -238,7 +222,8 @@ var App = ( function() {
 
             map = new OpenLayers.Map(el);
             mapnik = new OpenLayers.Layer.OSM();
-            map.addLayers([mapnik]);
+            mainLayer = new OpenLayers.Layer.Vector.OWMWeather("Weather");
+            map.addLayers([mapnik, mainLayer]);
             getCoords();
             toggleLoadingView();
             map.setCenter(coords, zoom);

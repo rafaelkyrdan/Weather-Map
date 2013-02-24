@@ -21,65 +21,6 @@
     <script src="app/js/init.js"></script>
     <script src="app/js/app.js"></script>
 
-    <style type="text/css">
-        #map {
-            width: 100%;
-            height: 100%;
-            border: 0px;
-            padding: 0px;
-            position: absolute;
-        }
-
-        body {
-            border: 0px;
-            margin: 0px;
-            padding: 0px;
-            height: 100%;
-            font-family: sans-serif;
-        }
-
-        #links {
-            background: #575757;
-            color: white;
-            z-index:1000;
-            width: 33%;
-            font-size: 1em;
-            text-align: left;
-            position: absolute;
-            bottom: 0.2em;
-            left: 0.2em;
-            padding: 5px;
-            width: 33%;
-            /* for IE */
-            filter:alpha(opacity=90);
-            /* CSS3 standard */
-            opacity:0.9;
-            border-radius: 4px;
-        }
-
-        .olControlAttribution {
-            padding: 5px;
-            z-index: 1000;
-            bottom: 0.2em !important;
-            overflow: hidden;
-            background: #575757;
-            color: white;
-            width: 33%;
-            font-size: 1em !important;
-            text-align: right;
-            /* for IE */
-            filter:alpha(opacity=90);
-            /* CSS3 standard */
-            opacity:0.9;
-            border-radius: 4px;
-        }
-
-        a:link, a:visited, a:hover, a:active {
-            /*color: #00008a;*/
-            color: #9e9eff;
-        }
-    </style>
-
 </head>
 <body>
 <div class="content">
@@ -97,74 +38,53 @@
         <div id="basicMap" style=""></div>
     </div>
     <div class="sidebar">
-        <a class="tiles violet">
-            <span class="icon home"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles violet" id="globe">
-            <span class="icon globe"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
-        <a class="tiles blue" id="stations">
-            <span class="icon map"></span>
-            <span class="big-content">
-                <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
-            </span>
-        </a>
         <a class="tiles blue" id="pressure">
             <span class="icon radioactive"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Pressure
             </span>
         </a>
-        <a class="tiles violet" id="temp">
+        <a class="tiles green" id="temp">
             <span class="icon fahrenheit"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Temperature
             </span>
         </a>
         <a class="tiles violet" id="wind">
             <span class="icon skydrive"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Wind
             </span>
         </a>
-        <a class="tiles green" id="cloud">
+        <a class="tiles blue" id="cloud">
             <span class="icon overcast"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Cloud
             </span>
         </a>
-        <a class="tiles violet" id="precipitation">
+        <a class="tiles green" id="precipitation">
             <span class="icon chance"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Precipitation
             </span>
         </a>
-        <a class="tiles blue" id="rain">
+        <a class="tiles violet" id="rain">
             <span class="icon rain"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Rain
             </span>
         </a>
-        <a class="tiles green" id="snow">
+        <a class="tiles blue" id="snow">
             <span class="icon snowflake"></span>
             <span class="big-content">
                 <span class="mini-content">&#9679; &#9679; &#9679;</span>
-                some text
+                Snow
             </span>
         </a>
     </div>
