@@ -36,7 +36,7 @@ You can download application.
 
 Versions:
 
-**cooming soon**
+[Download](https://www.dropbox.com/s/hj2dvknw7a63sd9/weather-map-linux.zip)
 
 *Licence*
 
