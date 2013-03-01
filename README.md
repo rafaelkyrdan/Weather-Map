@@ -1,7 +1,7 @@
 Weather-Map
 ==========
 
-Weather-Map free weather map
+Weather-Map free weather map. It is desktop application based on [node-webkit](https://github.com/rogerwang/node-webkit). 
 
 ##English
 
