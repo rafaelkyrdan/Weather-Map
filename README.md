@@ -5,6 +5,9 @@ Weather-Map free weather map. It is desktop application based on [node-webkit](h
 
 ##English
 
+*TODO:*
+This application requires a refactoring and cleaning. It has been written more than 3 years ago with lack of knowledge what is a good code style.
+
 *About Application*
 
 Weather-Map is a desktop application that provides free weather data.
